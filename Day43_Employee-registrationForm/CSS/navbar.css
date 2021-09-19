@@ -1,0 +1,119 @@
+/* navbar */
+.navbar {
+    background-color: #fff;
+    min-height: 64px;
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15%;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 720px) {
+    .navbar {
+      padding: 0 10px;
+    }
+  }
+  
+  .logo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .logo img {
+    grid-row: span 2;
+  }
+  
+  .brand-name-1,
+  .brand-name-2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-name-1 {
+    color: #85a911;
+  }
+  
+  .brand-name-2 {
+    color: #66737e;
+  }
+  
+  /* admin details */
+  .account {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .user {
+    cursor: pointer;
+    position: relative;
+    width: 250px;
+  }
+  @media screen and (max-width: 670px) {
+    .user {
+      width: 200px;
+    }
+  }
+  .user > * {
+    width: 100%;
+  }
+  
+  .user .user-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .username,
+  .user-detail {
+    /* padding: 10px; */
+    border: solid 1px #66737e;
+    border-radius: 5px;
+  }
+  
+  .user-detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    /* background-color: #f00; */
+    background: #fff;
+    display: inline-block;
+    transition: visibility 0s, opacity 0.2s linear;
+    box-shadow: 0 0 2px #333;
+  }
+  .user .user-detail {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .user.on .user-detail {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .user > .username {
+    padding: 9px;
+    font-size: 0.8rem;
+  }
+  
+  .user .user-detail > div {
+    margin: 9px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .logout {
+    background-color: #85a911;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 15px;
+  }
